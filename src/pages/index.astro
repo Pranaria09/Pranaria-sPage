@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,37 +14,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+			<div class="container flex justify-center px-16 py-32">
+				<h1>Pranaria's Portfolio</h1>
+				<p>		Pranariaとはなにか<br>
+			   		どんなスキルがあるのか<br>
+			   		どんなことをしてきたのか<br>
+			   		に関するページになっています。<br>
+			   		定期的に更新します。
+				</p>
+			</div>
+
+			<h2>プラナリアとはなにか</h2>
+			<p>沖縄高専メディア情報工学科 2023年度入学</p>
+			<Button />
+
+			<h2>どんなスキルがあるのか</h2>
+			<p>技術</p>
+			<li>webフロントエンド</li>
+			<li>ゲーム開発</li>
+			<p>デザイン</p>
+			<li>名刺制作</li>
+			<li></li>
+
+			<h2>どんなことをしてきたのか</h2>
+			<p>2024年度</p>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li>未踏ジュニア(予選落ち)</li>
+				<li>みらいスタジオインターン所属</li>
 			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
 		</main>
 		<Footer />
 	</body>
