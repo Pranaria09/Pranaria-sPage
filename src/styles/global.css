@@ -4,6 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
@@ -62,7 +66,7 @@ h1 {
 	font-size: 3.052em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.953em;
 }
 h3 {
 	font-size: 1.953em;
@@ -84,7 +88,7 @@ a:hover {
 	color: var(--accent);
 }
 p {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 .prose p {
 	margin-bottom: 2em;

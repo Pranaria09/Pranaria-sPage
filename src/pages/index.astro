@@ -14,34 +14,45 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<div class="container flex justify-center px-16 py-32">
-				<h1>Pranaria's Portfolio</h1>
-				<p>		Pranariaとはなにか<br>
-			   		どんなスキルがあるのか<br>
-			   		どんなことをしてきたのか<br>
-			   		に関するページになっています。<br>
-			   		定期的に更新します。
-				</p>
+			<div class="container px-16 py-16 mx-auto">
+				<h1 class="flex justify-center">Pranaria's Portfolio</h1>
 			</div>
 
-			<h2>プラナリアとはなにか</h2>
-			<p>沖縄高専メディア情報工学科 2023年度入学</p>
-			<Button />
+			<div class="py-32">
+				<h2 class="flex justify-center">プラナリアとはなにか</h2>
 
-			<h2>どんなスキルがあるのか</h2>
-			<p>技術</p>
-			<li>webフロントエンド</li>
-			<li>ゲーム開発</li>
-			<p>デザイン</p>
-			<li>名刺制作</li>
-			<li></li>
+				<div class="container m-8 mx-auto">
+					<li class="flex justify-center">沖縄高専メディア情報工学科 2023年度入学</li>
+				</div>
+				<Button />
+		    </div>
 
-			<h2>どんなことをしてきたのか</h2>
-			<p>2024年度</p>
-			<ul>
-				<li>未踏ジュニア(予選落ち)</li>
-				<li>みらいスタジオインターン所属</li>
-			</ul>
+			<div class="py-32">
+				<h2 class="flex justify-center">どんなスキルがあるのか</h2>
+
+				<div class="container m-8 mx-auto">
+					<p class="">技術</p>
+					<li>webフロントエンド</li>
+					<li>ゲーム開発</li>
+					<p>デザイン</p>
+					<li>名刺制作</li>
+				</div>
+			</div>
+
+			<h2 class="flex justify-center">どんなことをしてきたのか</h2>
+
+			<div class="container m-16 mt-32 mx-auto">
+				<p>2024年度</p>
+				<ul>
+					<li>未踏ジュニア(予選落ち)</li>
+					<li>みらいスタジオインターン所属</li>
+				</ul>
+			</div>
+
+			<div class="container m-16 mt-32 mx-auto">
+				<h2 class="flex justify-center">お問い合わせ</h2>
+				<p>gmail: eiju.chinen@gmail.com</p>
+			</div>
 		</main>
 		<Footer />
 	</body>
