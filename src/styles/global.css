@@ -8,6 +8,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
@@ -63,10 +65,10 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 3.006em;
 }
 h2 {
-	font-size: 1.953em;
+	font-size: 2.34em;
 }
 h3 {
 	font-size: 1.953em;
@@ -88,6 +90,7 @@ a:hover {
 	color: var(--accent);
 }
 p {
+	font-size: theme(fontSize.xl);
 	margin-bottom: 0.5em;
 }
 .prose p {
@@ -155,4 +158,6 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
 }

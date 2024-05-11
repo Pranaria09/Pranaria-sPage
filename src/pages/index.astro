@@ -14,11 +14,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<div class="container px-16 py-16 mx-auto">
+			<div class="container px-16 py-64 mx-auto">
 				<h1 class="flex justify-center">Pranaria's Portfolio</h1>
 			</div>
 
-			<div class="py-32">
+			<div class="py-16">
 				<h2 class="flex justify-center">プラナリアとはなにか</h2>
 
 				<div class="container m-8 mx-auto">
@@ -27,31 +27,50 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<Button />
 		    </div>
 
-			<div class="py-32">
+			<div class="py-16">
 				<h2 class="flex justify-center">どんなスキルがあるのか</h2>
 
-				<div class="container m-8 mx-auto">
-					<p class="">技術</p>
-					<li>webフロントエンド</li>
-					<li>ゲーム開発</li>
-					<p>デザイン</p>
-					<li>名刺制作</li>
+				<div class="container m-8 mx-auto px-32">
+					<span class="container mx-64">
+						<p class="flex justify-center my-2 font-bold">技術</p>
+						<div class="container flex justify-center">
+							<ul>
+								<li class="text-center">フロントエンド</li>
+								<li class="text-center">ゲーム開発</li>
+							</ul>
+						</div>
+					</span>
+
+					<span class="container mx-64">
+						<p class="flex justify-center my-2 font-bold">デザイン</p>
+						<div class="container flex justify-center">
+							<ul>
+								<li class="text-center">名刺制作</li>
+							</ul>
+						</div>
+					</span>
 				</div>
 			</div>
 
-			<h2 class="flex justify-center">どんなことをしてきたのか</h2>
+			<div class="py-16">
+				<h2 class="flex justify-center">どんなことをしてきたのか</h2>
 
-			<div class="container m-16 mt-32 mx-auto">
-				<p>2024年度</p>
-				<ul>
-					<li>未踏ジュニア(予選落ち)</li>
-					<li>みらいスタジオインターン所属</li>
-				</ul>
+				<div class="container m-8 mx-auto px-32">
+					<p class="text-center">2024年度</p>
+					<span class="flex justify-center">
+						<ul>
+							<li>未踏ジュニア(予選落ち)</li>
+							<li>みらいスタジオインターン所属</li>
+						</ul>
+					</span>
+				</div>
 			</div>
 
-			<div class="container m-16 mt-32 mx-auto">
+			<div class="py-16">
 				<h2 class="flex justify-center">お問い合わせ</h2>
-				<p>gmail: eiju.chinen@gmail.com</p>
+				<div class="container m-8 mx-auto px-32">
+					<p class="text-center">gmail: eiju.chinen@gmail.com</p>
+				</div>
 			</div>
 		</main>
 		<Footer />
