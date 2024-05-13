@@ -1,64 +1,75 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('May 09 2024')}
-	heroImage="/blog-placeholder-about.jpg"
->
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+	<Header/>
 	<main>
-		<h2>所属</h2>
-	<p>
-		学校：<br>
-		沖縄工業高等専門学校 メディア情報工学科 23年度入学
-	</p>
-	<p>
-		部活：<br>
-		ICT委員会所属
-	</p>
-	<p>
-		インターン：<br>
-		株式会社みらいスタジオ
-	</p>
+		<div class="container pm-32 flex-center">
+		<div class="container py-8">
+			<h2>所属</h2>
 
-	<h2>これまでの履歴</h2>
-	<div>
-		<p>インターン</p>
-		<p>みらいスタジオ インターン</p>
-		<ul>
-			<li>沖縄ハッカソンver.2 サブpm</li>
-			<li>高専キャリア2023 京都大茶会 ロジ</li>
-			<li>高専キャリアビジッカソン ロジ</li>
-			<li>高専キャリアgw交流会 ロジ</li>
-		</ul>
-	</div>
-	<div>
-		<p>LT発表</p>
-		<ul>
-			<li>2023高専キャリア 夏の交流会
-				<li>ゲームエンジンだけじゃない！UE5の有用性について</li>
-			</li>
-			<li>2023沖縄HackersChamploo
-				<li>Blueprintでプログラミングを学ぼうって話</li>
-			</li>
-			<li>高専キャリアクラブ活動LT
-				<li>クラブ活動LT - ゲーム開発部</li>
-			</li>
-			<li>高専キャリア2023京都大茶会
-				<li>Github個人開発のすすめ</li>
-			</li>
-			<li>高専キャリアgw交流会
-				<li>未踏ジュニアに応募した話</li>
-			</li>
-		</ul>
-	</div>
-	<h2>挑戦したこと</h2>
-	<div>
-		<p>2024年度未踏ジュニア(未採択)</p>
-		<!--提案書のpdfファイル添付する-->
-		<p>高専キャリア起業部合宿 ピッチ</p>
+			<div class="my-4 py-8">
+				<p class="font-bold">学校：</p>
+				<span class="">沖縄工業高等専門学校 メディア情報工学科 23年度入学</span>
+			</div>
+
+			<div class="my-4 py-8">
+				<p class="font-bold">部活：</p>
+				<span>ICT委員会所属</span>
+			</div>
+
+			<div class="my-4 py-8">
+				<p class="font-bold">インターン：</p>
+				<span>株式会社みらいスタジオ</span>
+			</div>
+		</div>
+
+		<div class="container py-8">
+			<h2>これまでの履歴</h2>
+			<div class="my-4 py-8">
+				<p class="font-bold">インターン</p>
+				<span>みらいスタジオ インターン</span>
+				<div class="mx-4">
+					<li class="list-decimal">沖縄オープンイノベーションハッカソン2023 ver.2  :サブpm</li>
+					<li class="list-decimal">高専キャリア2023 京都大茶会  :ロジ</li>
+					<li class="list-decimal">高専キャリア春のビジッカソン  :ロジ</li>
+					<li class="list-decimal">高専キャリアgw交流会  :ロジ</li>
+				</div>
+			</div>
+			<div>
+				<p class="font-bold">LT発表</p>
+					<li>2023高専キャリア 夏の交流会
+						<li class="mx-8">ゲームエンジンだけじゃない! UE5の有用性について</li>
+					<li>2023沖縄HackersChamploo
+						<li class="mx-8">Blueprintでプログラミングを学ぼうって話</li>
+					<li>高専キャリアクラブ活動LT
+						<li class="mx-8">クラブ活動LT - ゲーム開発部</li>
+					<li>高専キャリア2023京都大茶会
+						<li class="mx-8">Github個人開発のすすめ</li>
+					<li>高専キャリアgw交流会
+						<li class="mx-8">未踏ジュニアに応募した話</li>
+			</div>
+		</div>
+
+		<h2>挑戦したこと</h2>
+
+		<div class="container py-8">
+			<li>2024年度未踏ジュニア(未採択)</li>
+			<!--提案書のpdfファイル添付する-->
+			<li>高専キャリア起業部合宿 ピッチ</li>
+		</div>
 	</div>
 	</main>
-</Layout>
+	<Footer/>
+	</body>
+</html>
