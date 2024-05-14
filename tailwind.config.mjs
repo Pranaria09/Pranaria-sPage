@@ -6,6 +6,8 @@ export default {
 			blue: "#2D6E93",
 			sky: "#47A7DD",
 			white: "#FFFFFF",
+			gray: "#515151",
+			black: "#000000",
 		},
 		fontSize: {
 			xs: ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.03em"}],
