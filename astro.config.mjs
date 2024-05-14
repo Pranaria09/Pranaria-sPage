@@ -8,5 +8,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://pranariaspage.onrender.com',
   integrations: [mdx(), sitemap(), tailwind()],
-  server: { port:8000 }
+  server: { port:5000 }
 });
