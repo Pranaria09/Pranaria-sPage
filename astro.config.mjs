@@ -10,6 +10,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind()],
   server: { 
     open: true,
-    port: process.env.PORT || 5000
+    port: Number(process.env.PORT) || 5000
   }
 });
