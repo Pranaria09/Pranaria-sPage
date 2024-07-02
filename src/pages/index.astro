@@ -6,6 +6,24 @@ import Button from '../components/Button.astro';
 import Sbutton from '../components/Sbutton.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/global.css';
+
+export interface ApiResults {
+    count: number;
+    data: string[];
+}
+
+export async function getApiResults() {
+	try {    
+		const responce = await fetch("http://localhost:8080");
+    	if(!responce.ok) {
+        	throw new Error("Failed to fetch API");
+    	}
+    	const data = (await responce.json()) as ApiResults;
+		return data;
+	} catch (error) {
+		console.error(error);
+	}
+}
 ---
 
 <!doctype html>
@@ -73,7 +91,7 @@ import '../styles/global.css';
 					</span>
 
 					<p class="text-center mt-8 font-bold">2024年度</p>
-					<span class="flex justify-center">	
+					<span class="flex justify-center text-center">	
 						<ul>
 							<li class="mb-8">未踏ジュニア(予選落ち)</li>
 
@@ -97,7 +115,13 @@ import '../styles/global.css';
 					</span>
 				</div>
 			</div>
-
+			<!-- Get responce from my Marp code -->
+			<div class="py-16">
+				<p>ここから</p>
+				<div>
+					{ getApiResults() }
+				</div>
+			<!-- End get responce -->
 			<div class="py-16">
 				<h2 class="flex justify-center">お問い合わせ</h2>
 				<div class="container m-16 mx-auto px-32">
