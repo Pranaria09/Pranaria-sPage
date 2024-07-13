@@ -7,8 +7,8 @@ const props = Astro.props
 <header>
 	<nav>
 		<h2 class="w-32 text-base/3 flex-right text-white"><a href="/">{SITE_TITLE}</a></h2>
-		<div class=" flex justify-center">
-			<div class="internal-links text-white">
+		<div class="flex justify-center">
+			<div class="w-full block text-white flex-grow lg:flex lg:items-center lg:w-auto">
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
@@ -50,6 +50,7 @@ const props = Astro.props
 		padding: 0 1em;
 		background: #2D6E93;;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		width: 100%;
 	}
 	h2 {
 		margin: 0;

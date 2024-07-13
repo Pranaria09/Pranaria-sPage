@@ -6,130 +6,108 @@ import Button from '../components/Button.astro';
 import Sbutton from '../components/Sbutton.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/global.css';
-
-export interface ApiResults {
-    count: number;
-    data: string[];
-}
-
-export async function getApiResults() {
-	try {    
-		const responce = await fetch("http://localhost:8080");
-    	if(!responce.ok) {
-        	throw new Error("Failed to fetch API");
-    	}
-    	const data = (await responce.json()) as ApiResults;
-		return data;
-	} catch (error) {
-		console.error(error);
-	}
-}
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class="container px-16 py-64 mx-auto">
-				<h1 class="flex justify-center">Pranaria's Portfolio</h1>
-			</div>
-
-			<div class="py-16">
-				<h2 class="flex justify-center">プラナリアとはなにか</h2>
-
-				<div class="container m-8 mx-auto">
-					<li class="flex justify-center">沖縄高専メディア情報工学科 2023年度入学</li>
+			<div class="">
+				<div class="container px-16 py-64 mx-auto">
+					<h1 class="flex justify-center">Pranaria's Portfolio</h1>
 				</div>
-				<Button/>
-		    </div>
 
-			<div class="py-16">
-				<h2 class="flex justify-center">どんなスキルがあるのか</h2>
+				<div class="py-16">
+					<h2 class="flex justify-center">プラナリアとはなにか</h2>
 
-				<div class="container m-8 mx-auto px-32">
-					<span class="container mx-64">
-						<p class="flex justify-center my-2 font-bold">技術</p>
-						<div class="container flex justify-center">
-							<ul>
-								<li class="text-center">フロントエンド</li>
-								<li class="text-center">ゲーム開発</li>
-							</ul>
-						</div>
-					</span>
+					<div class="container m-8 mx-auto">
+						<li class="flex justify-center">沖縄高専メディア情報工学科 2023年度入学</li>
+					</div>
+					<Button/>
+		    	</div>
 
-					<span class="container mx-64">
-						<p class="flex justify-center my-2 font-bold">デザイン</p>
-						<div class="container flex justify-center">
-							<ul>
-								<li class="text-center">名刺制作</li>
-							</ul>
-						</div>
-					</span>
+				<div class="py-16">
+					<h2 class="flex justify-center">どんなスキルがあるのか</h2>
+
+					<div class="container m-8 mx-auto px-32">
+						<span class="container mx-64">
+							<p class="flex justify-center my-2 font-bold">技術</p>
+							<div class="container flex justify-center">
+								<ul>
+									<li class="text-center">フロントエンド</li>
+									<li class="text-center">ゲーム開発</li>
+								</ul>
+							</div>
+						</span>
+
+						<span class="container mx-64">
+							<p class="flex justify-center my-2 font-bold">デザイン</p>
+							<div class="container flex justify-center">
+								<ul>
+									<li class="text-center">名刺制作</li>
+								</ul>
+							</div>
+						</span>
+					</div>
 				</div>
-			</div>
 
-			<div class="py-16">
-				<h2 class="flex justify-center">どんなことをしてきたのか</h2>
+				<div class="py-16">
+					<h2 class="flex justify-center">どんなことをしてきたのか</h2>
 
-				<div class="container m-8 mx-auto px-32">
-					<p class="text-center mt-8 font-bold">2023年度</p>
+					<div class="container m-8 mx-auto px-32">
+						<p class="text-center mt-8 font-bold">2023年度</p>
 
-					<span class="flex justify-center">
-						<ul class="text-center">
-							<li>沖縄オープンイノベーションハッカソンvol.1</li>
-								<li class="mb-8">(Reactアプリケーションの作成)</li>
+						<span class="flex justify-center">
+							<ul class="text-center">
+								<li>沖縄オープンイノベーションハッカソンvol.1</li>
+									<li class="mb-8">(Reactアプリケーションの作成)</li>
 
-							<li class="mb-8">みらいスタジオインターン所属</li>
+								<li class="mb-8">みらいスタジオインターン所属</li>
 
-							<li>沖縄オープンイノベーションハッカソンvol.2</li>
-								<li class="mb-8">(Next.jsアプリケーションの作成)</li>
-						</ul>
-					</span>
+								<li>沖縄オープンイノベーションハッカソンvol.2</li>
+									<li class="mb-8">(Next.jsアプリケーションの作成)</li>
+							</ul>
+						</span>
 
-					<p class="text-center mt-8 font-bold">2024年度</p>
-					<span class="flex justify-center text-center">	
-						<ul>
-							<li class="mb-8">未踏ジュニア(予選落ち)</li>
-
-							<li class="mb-8">21回 UE5ぷちこん "Osubakari"</li>
-						</ul>
-					</span>
+						<p class="text-center mt-8 font-bold">2024年度</p>
+						<span class="flex justify-center text-center">	
+							<ul>
+								<li class="mb-8">未踏ジュニア(予選落ち)</li>
+								<li class="mb-8">21回 UE5ぷちこん "Osubakari"</li>
+							</ul>
+						</span>
 					
+					</div>
 				</div>
-			</div>
 
-			<div class="py-16">
-				<h2 class="flex justify-center">いままでの個人開発</h2>
+				<div class="py-16">
+					<h2 class="flex justify-center">いままでの個人開発</h2>
 
-				<div class="container m-8 mx-auto px-32">
-					<p class="text-center">2024年度</p>
-					<span class="flex justify-center">
-						<ul>
-							<li>Ubuntuでの校内プロキシパスを通すシェル</li>
-							<li class="text-center">(セキュリティ上公開不可)</li>
-						</ul>
-					</span>
+					<div class="container m-8 mx-auto px-32">
+						<p class="text-center">2024年度</p>
+						<span class="flex justify-center">
+							<ul>
+								<li>Ubuntuでの校内プロキシパスを通すシェル</li>
+								<li class="text-center">(セキュリティ上公開不可)</li>
+							</ul>
+						</span>
+					</div>
 				</div>
-			</div>
-			<!-- Get responce from my Marp code -->
-			<div class="py-16">
-				<p>ここから</p>
-				<div>
-					{ getApiResults() }
-				</div>
-			<!-- End get responce -->
-			<div class="py-16">
-				<h2 class="flex justify-center">お問い合わせ</h2>
-				<div class="container m-16 mx-auto px-32">
-					<div class="container flex justify-center">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24">
-							<path fill="currentColor" d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/
-						></svg>
-					<p class="text-center">eiju.chinen@gmail.com</p>
+				<!-- Get responce from my Marp code -->
+				<!-- End get responce -->
+				<div class="py-16">
+					<h2 class="flex justify-center">お問い合わせ</h2>
+					<div class="container m-16 mx-auto px-32">
+						<div class="container flex justify-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24">
+								<path fill="currentColor" d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/
+							></svg>
+						<p class="text-center">eiju.chinen@gmail.com</p>
+					</div>
 				</div>
 			</div>
 		</main>
