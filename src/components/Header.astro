@@ -6,14 +6,12 @@ const props = Astro.props
 
 <header>
 	<nav>
-		<h2 class="w-32 text-base/3 flex-right text-white"><a href="/">{SITE_TITLE}</a></h2>
-		<div class="flex justify-center">
+		<h2 class="flex items-center flex-shrink-0 text-white mr-6"><a href="/">{SITE_TITLE}</a></h2>
 			<div class="w-full block text-white flex-grow lg:flex lg:items-center lg:w-auto">
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
 			</div>
-		</div>
 		<div class="social-links">
 			<a href="https://twitter.com/pranaria9" target="_blank">
 				<span class="sr-only">Follow Astro on Twitter</span>
@@ -51,6 +49,7 @@ const props = Astro.props
 		background: #2D6E93;;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		width: 100%;
+		height: auto;
 	}
 	h2 {
 		margin: 0;
@@ -62,7 +61,6 @@ const props = Astro.props
 	}
 	nav {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 	}
 	nav a {
